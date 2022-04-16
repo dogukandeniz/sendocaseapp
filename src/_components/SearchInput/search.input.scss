@@ -1,0 +1,32 @@
+.form-component-01{
+  padding: 60px;
+  display: flex;
+  align-items: center;
+  background: #443f5d;
+
+  img{
+    margin-right: 12px;
+  }
+
+  input{
+    background: transparent;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 400;
+    border-bottom:1px solid #eff1f3;
+    width: 600px;
+
+
+    &::-webkit-input-placeholder { /* Edge */
+      color: #eff1f3;
+    }
+
+    &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+      color: #eff1f3;
+    }
+
+    &::placeholder {
+      color: #eff1f3;
+    }
+  }
+}
