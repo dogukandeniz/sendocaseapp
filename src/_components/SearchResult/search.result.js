@@ -4,6 +4,10 @@ import { useSelector } from 'react-redux'
 
 
 const SearchResult = props => {
+
+    useEffect(() => {
+        console.log("search result comp useEffect")
+    }, []);
     const searchState = useSelector(state => state.search)
 
     return (

@@ -7,7 +7,7 @@ const initialState = {
 }
 
 export function search(state = initialState, action) {
-    debugger
+
     switch (action.type) {
         case searchConstants.SEARCH_FILTER_REQUEST:
             return {

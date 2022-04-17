@@ -1,6 +1,6 @@
 import React, { useEffect,useState } from "react";
 import  { useDispatch } from "react-redux";
-import {getFilteredResult, resetSearchFilter} from '../../_actions';
+import {initSearchFilter, resetSearchFilter} from '../../_actions';
 import './search.input.scss';
 
 
@@ -14,7 +14,7 @@ const SearchInput = props => {
 
       if(val.length > 2){
             setFilterVal(val)
-            dispatch(getFilteredResult(val));
+            dispatch(initSearchFilter(val));
         }
       else {
           dispatch(resetSearchFilter());
@@ -27,12 +27,12 @@ const SearchInput = props => {
     } = props;
 
     useEffect(() => {
-
+        console.log("search input comp useEffect")
     }, []);
 
     return (
         <div className="form-component-01">
-            <img src={require('../../assets/img/MagnifyingGlass.png')} />
+            <img src={require('../../assets/img/icons8-search-32.png')} />
             <input
                 id={id}
                 type="text"
